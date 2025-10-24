@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ATS-Friendly Two-Column CV Template (Fixed Layout)
+% ATS-Friendly Two-Column CV Template (Custom 70-30 Layout)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[9pt, a4paper]{article}
@@ -11,7 +11,6 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
 \usepackage{xcolor}
-\usepackage{paracol}
 
 \definecolor{sectionblue}{rgb}{0.1, 0.3, 0.6}
 \pagestyle{empty}
@@ -37,9 +36,9 @@
 	\end{center}
 	\vspace{10pt}
 	
-	%---------------- FIXED COLUMN LAYOUT USING PARACOL ----------------
-	\begin{paracol}{2}
-		\setlength{\columnsep}{1cm} % space between columns
+	%---------------- TWO-COLUMN LAYOUT USING MINIPAGE (70-30) ----------------
+	\begin{minipage}[t]{0.70\linewidth}
+		\vspace{0pt} % Top-align
 		
 		%---------------- LEFT COLUMN ----------------
 		\cvsection{Work Experience}
@@ -82,8 +81,10 @@
 		\cvsubsection{MSc, AI \& Machine Learning Engineering}{Oct 2022 -- Jun 2025 (Expected)}{UNICAL, Rende (CS), Italy}
 		\cvsubsection{BSc, Computer Engineering}{Oct 2018 -- Jun 2022}{UNICAL, Rende (CS), Italy}
 		
-		% switch columns
-		\switchcolumn
+	\end{minipage}%
+	\hfill%
+	\begin{minipage}[t]{0.27\linewidth}
+		\vspace{0pt} % Top-align
 		
 		%---------------- RIGHT COLUMN ----------------
 		\begin{center}
@@ -141,5 +142,6 @@
 			\item English: Professional (B2)
 		\end{itemize}
 		
-	\end{paracol}
+	\end{minipage}
+	
 \end{document}
