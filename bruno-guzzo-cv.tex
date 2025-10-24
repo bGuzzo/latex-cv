@@ -1,296 +1,145 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ATS-Friendly Two-Column CV Template
-%
-% This template is designed to be:
-% 1. Single-page
-% 2. ATS (Application Tracking System) friendly
-% 3. Professional and clean
+% ATS-Friendly Two-Column CV Template (Fixed Layout)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	DOCUMENT CONFIGURATION
-%----------------------------------------------------------------------------------------
-
-% Use the 'article' class, 9pt font size, and A4 paper.
 \documentclass[9pt, a4paper]{article}
-
-% Set margins and page layout
 \usepackage[a4paper, margin=0.7in, top=0.5in, bottom=0.5in]{geometry}
-
-% Required for symbols (phone, email, etc.)
 \usepackage{fontawesome5}
-
-% Required for side-by-side columns (minipage)
 \usepackage{tabularx}
-
-% Required for custom lists and spacing
 \usepackage{enumitem}
-
-% Required for including images (your photo)
 \usepackage{graphicx}
-
-% Required for clickable links and email addresses
 \usepackage[hidelinks]{hyperref}
-
-% Required for aligning content (e.g., \hfill)
 \usepackage{amsmath}
-
-% Define a custom color for section headings (optional, but professional)
 \usepackage{xcolor}
+\usepackage{paracol}
+
 \definecolor{sectionblue}{rgb}{0.1, 0.3, 0.6}
-
-% Remove page numbering
 \pagestyle{empty}
-
-% Remove paragraph indentation
 \setlength{\parindent}{0pt}
 
-%----------------------------------------------------------------------------------------
-%	CUSTOM SECTION COMMAND
-%----------------------------------------------------------------------------------------
-
-% Define a new command for sections to ensure consistent styling and spacing
-% This is ATS-friendly as it uses standard text formatting.
 \newcommand{\cvsection}[1]{%
-  \vspace{8pt} % Space above the section
-  \par % Ensure it's a new paragraph
-  {\Large\bfseries\color{sectionblue}#1} % Section title formatting
-  \par % New line after the title
-  \vspace{2pt} % Space below the title
-  \hrule % Horizontal line
-  \vspace{6pt} % Space below the line
+	\vspace{8pt}\par
+	{\Large\bfseries\color{sectionblue}#1}\par
+	\vspace{2pt}\hrule\vspace{6pt}
 }
 
-% Define a command for subheadings (e.g., job titles, degrees)
 \newcommand{\cvsubsection}[3]{%
-  \par % New paragraph
-  {\large\bfseries #1} % Job title/degree
-  \hfill % Push date to the right
-  {\bfseries #2} % Date
-  \par % New line
-  {\textit{#3}} % Company/University
-  \vspace{4pt} % Space below
+	\par {\large\bfseries #1} \hfill {\bfseries #2} \par {\textit{#3}} \vspace{4pt}
 }
 
-%----------------------------------------------------------------------------------------
-%	DOCUMENT START
-%----------------------------------------------------------------------------------------
 \begin{document}
-
-%----------------------------------------------------------------------------------------
-%	HEADER: NAME AND TITLE
-%----------------------------------------------------------------------------------------
-
-\begin{center}
-    {\Huge\bfseries Bruno Guzzo} % Your name
-    \vspace{4pt}
-    \par
-    {\Large Software \& Cloud Engineer | Machine Learning Specialist} % Your title
-\end{center}
-\vspace{8pt}
-
-%----------------------------------------------------------------------------------------
-%	MAIN CONTENT (Left Column)
-%----------------------------------------------------------------------------------------
-
-% Start the left column (main body)
-% \minipage[t] means the box is aligned at the top.
-\begin{minipage}[t]{0.70\textwidth}
-
-%------------------------------------------------
-% WORK EXPERIENCE
-%------------------------------------------------
-\cvsection{Work Experience}
-
-% --- Example Entry 1 ---
-\cvsubsection
-  {Senior Consultant} % Your Role
-  {June 2022 -- Present} % Dates
-  {Go Reply, Turin/Remote} % Company & Location
-
-% Use itemize for problem/result-focused descriptions
-\begin{itemize}[leftmargin=*, nosep]
-    \item \textbf{Problem Solved:} Led the design and implementation of a cloud-native, serverless solution for [Specify Customer Problem, e.g., scalable data ingestion], migrating from a legacy monolithic system.
-    \item \textbf{Results Achieved:} Reduced operational costs by [X\%], improved system processing speed by [Y\%], and increased service availability to 99.99\%.
-    \item \textbf{Problem Solved:} Developed and integrated a secure CI/CD pipeline using [Tool, e.g., Cloud Build and Terraform] for automated testing and deployment across multiple environments.
-    \item \textbf{Results Achieved:} Decreased manual deployment errors by 100\% and reduced the lead time for new features from [X days] to [Y hours].
-    \item \textbf{Problem Solved:} Engineered a Generative AI-powered chatbot using [e.g., Vertex AI Agent Builder] with a RAG system to query [e.g., internal technical documentation].
-    \item \textbf{Results Achieved:} Improved internal support ticket resolution time by [X\%] by providing instant, accurate answers to common queries.
-\end{itemize}
-
-% --- Example Entry 2 (Placeholder) ---
-\vspace{6pt} % Add space between entries
-\cvsubsection
-  {Previous Role} % Your Role
-  {Month Year -- Month Year} % Dates
-  {Previous Company, City} % Company & Location
-
-\begin{itemize}[leftmargin=*, nosep]
-    \item \textbf{Problem Solved:} [Describe the business or technical problem you were tasked with addressing.]
-    \item \textbf{Results Achieved:} [Quantify the outcome: e.g., "Increased user engagement by X\%", "Optimized database queries, resulting in Y\% faster load times."]
-\end{itemize}
-
-%------------------------------------------------
-% PERSONAL & ACADEMIC PROJECTS
-%------------------------------------------------
-\cvsection{Personal \& Academic Projects}
-
-% --- Project Entry 1 (from your repo) ---
-\cvsubsection
-  {MSc Thesis: Anomaly Detection with Deep Autoencoders} % Project Title
-  {2024 -- 2025} % Dates
-  {\href{https://github.com/bGuzzo/msc-ai-ml-thesis-anomaly-detection}{github.com/bGuzzo/msc-ai-ml-thesis-anomaly-detection}} % Link
-
-\begin{itemize}[leftmargin=*, nosep]
-    \item Researched and implemented various Autoencoder architectures (Deep AE, VAE, ConvAE) using PyTorch for unsupervised anomaly detection on image datasets (e.g., MNIST).
-    \item \textbf{Results:} Achieved [X\%] AUC-ROC in identifying anomalous data points, demonstrating the model's effectiveness for [e.g., industrial defect detection].
-\end{itemize}
-
-% --- Project Entry 2 (from your repo) ---
-\vspace{6pt} % Add space between entries
-\cvsubsection
-  {Transformer \& GNN for Link Prediction} % Project Title
-  {2024} % Dates
-  {\href{https://github.com/bGuzzo/transformer-gnn-link-prediction}{github.com/bGuzzo/transformer-gnn-link-prediction}} % Link
-
-\begin{itemize}[leftmargin=*, nosep]
-    \item Developed a novel graph neural network model combining GAT (Graph Attention Networks) and Transformer layers to predict future links in dynamic graphs, such as Wikipedia article networks.
-    \item \textbf{Results:} The hybrid model outperformed baseline GNN models by [X\%] in link prediction accuracy on a custom-built Wikipedia dataset.
-\end{itemize}
-
-
-%------------------------------------------------
-% EDUCATION
-%------------------------------------------------
-\cvsection{Education}
-
-\cvsubsection
-  {Master of Science, AI \& Machine Learning Engineering} % Degree
-  {Oct 2022 -- June 2025 (Expected)} % Dates
-  {UNICAL, Rende (CS), Italy} % University
-
-% --- Add a brief description if desired ---
-% \begin{itemize}[leftmargin=*, nosep]
-%     \item \textbf{Key Coursework:} Deep Learning, Natural Language Processing, Computer Vision, Anomaly Detection.
-% \end{itemize}
-
-\vspace{6pt} % Add space between entries
-\cvsubsection
-  {Bachelor of Science, Computer Engineering} % Degree
-  {Oct 2018 -- June 2022} % Dates
-  {UNICAL, Rende (CS), Italy} % University
-  
-% --- Add a brief description if desired ---
-% \begin{itemize}[leftmargin=*, nosep]
-%     \item \textbf{Thesis:} [Your Bachelor's Thesis Title, if relevant]
-% \end{itemize}
-
-\end{minipage}
-% End of left column
-\hfill % Flexible space between columns
-%----------------------------------------------------------------------------------------
-%	SIDEBAR (Right Column)
-%----------------------------------------------------------------------------------------
-
-% Start the right column (sidebar)
-\begin{minipage}[t]{0.26\textwidth}
-
-%------------------------------------------------
-% PHOTO PLACEHOLDER
-%------------------------------------------------
-
-% This creates a 4.5cm x 4.5cm framed box as a placeholder.
-% To add your photo:
-% 1. Replace this \fbox{...} block with:
-%    \includegraphics[width=4.5cm, clip]{your-photo-filename.jpg}
-% 2. Make sure 'your-photo-filename.jpg' is in the same folder as this .tex file.
-\begin{center}
-    \fbox{\rule{0pt}{4.5cm}\hspace{4.5cm}} % Height and width of the placeholder box
-    \par
-    \small\textit{Replace this box with your photo}
-\end{center}
-\vspace{12pt}
-
-%------------------------------------------------
-% PERSONAL INFORMATION
-%------------------------------------------------
-% \cvsection{} % No title for this section, just the info
-
-% Using tabularx for clean alignment of icons and text
-\begin{tabularx}{\linewidth}{@{}lX@{}}
-    \faPhone & +39 339 830 5458 \\
-    \faEnvelope & \href{mailto:brunoguzzo18@gmail.com}{brunoguzzo18@gmail.com} \\
-    \faGithub & \href{https://github.com/bGuzzo}{github.com/bGuzzo} \\
-%    \faMapMarkerAlt & Turin, Italy \\
-\end{tabularx}
-
-%------------------------------------------------
-% TECHNICAL SKILLS
-%------------------------------------------------
-\cvsection{Technical Skills}
-
-% --- AI/ML Skills ---
-{\bfseries AI \& Machine Learning}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item \textbf{Frameworks:} PyTorch, Langchain
-    \item \textbf{Libraries:} Pandas, NumPy, Scikit-learn
-    \item \textbf{Concepts:} LLM Fine-Tuning, RAG, NLP, Deep Learning, Anomaly Detection, GNNs
-\end{itemize}
-\vspace{4pt}
-
-% --- Cloud Skills ---
-{\bfseries Cloud (Google Cloud)}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item \textbf{Compute:} Cloud Run, Cloud Functions
-    \item \textbf{AI/ML:} Vertex AI, Agent Builder
-    \item \textbf{Data:} BigQuery, Cloud SQL, Firestore
-    \item \textbf{Infra:} VPC, Load Balancer, IAM
-\end{itemize}
-\vspace{4pt}
-
-% --- Dev/Ops Skills ---
-{\bfseries DevOps}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item \textbf{IaC:} Terraform
-    \item \textbf{CI/CD:} Cloud Build, GitLab CI, GitHub Actions
-    \item \textbf{Containers:} Docker
-    \item \textbf{Other:} Linux Systems, Git
-\end{itemize}
-\vspace{4pt}
-
-% --- Development Skills ---
-{\bfseries Software Development}
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item \textbf{Languages:} Python, Java, JavaScript
-    \item \textbf{Frameworks:} Spring Boot, Angular, Flask
-    \item \textbf{Databases:} SQL (PostgreSQL), NoSQL
-\end{itemize}
-\vspace{4pt}
-
-
-%------------------------------------------------
-% CERTIFICATIONS
-%------------------------------------------------
-\cvsection{Certifications}
-
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item Google Cloud Professional Cloud Developer
-\end{itemize}
-
-%------------------------------------------------
-% LANGUAGES
-%------------------------------------------------
-\cvsection{Languages}
-
-\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-    \item \textbf{Italian:} Native Speaker
-    \item \textbf{English:} Professional Proficiency (B2)
-\end{itemize}
-
-\end{minipage}
-% End of right column
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT END
-%----------------------------------------------------------------------------------------
+	
+	%---------------- HEADER ----------------
+	\begin{center}
+		{\Huge\bfseries Bruno Guzzo}\par
+		\vspace{4pt}
+		{\Large Software \& Cloud Engineer | Machine Learning Specialist}
+	\end{center}
+	\vspace{10pt}
+	
+	%---------------- FIXED COLUMN LAYOUT USING PARACOL ----------------
+	\begin{paracol}{2}
+		\setlength{\columnsep}{1cm} % space between columns
+		
+		%---------------- LEFT COLUMN ----------------
+		\cvsection{Work Experience}
+		
+		\cvsubsection{Senior Consultant}{June 2022 -- Present}{Go Reply, Turin/Remote}
+		
+		\begin{itemize}[leftmargin=*, nosep]
+			\item Led the design and implementation of a cloud-native, serverless solution; migrated from a legacy monolithic system.
+			\item Reduced operational costs by X\%, improved processing speed by Y\%, and increased service availability to 99.99\%.
+			\item Integrated CI/CD pipelines with Cloud Build and Terraform; automated testing and deployment.
+			\item Decreased deployment errors by 100\% and shortened release time from days to hours.
+			\item Built a Generative AI chatbot with RAG system using Vertex AI Agent Builder for internal documentation.
+			\item Improved internal support ticket resolution by X\%.
+		\end{itemize}
+		
+		\vspace{6pt}
+		\cvsubsection{Previous Role}{Month Year -- Month Year}{Previous Company, City}
+		\begin{itemize}[leftmargin=*, nosep]
+			\item Addressed business or technical issues; designed data solutions improving performance and scalability.
+			\item Increased user engagement by X\%, reduced query latency by Y\%.
+		\end{itemize}
+		
+		\cvsection{Personal \& Academic Projects}
+		
+		\cvsubsection{MSc Thesis: Anomaly Detection with Deep Autoencoders}{2024 -- 2025}{\href{https://github.com/bGuzzo/msc-ai-ml-thesis-anomaly-detection}{github.com/bGuzzo/msc-ai-ml-thesis-anomaly-detection}}
+		\begin{itemize}[leftmargin=*, nosep]
+			\item Implemented Deep AE, VAE, and ConvAE using PyTorch for unsupervised anomaly detection.
+			\item Achieved X\% AUC-ROC detecting anomalies in industrial datasets.
+		\end{itemize}
+		
+		\vspace{6pt}
+		\cvsubsection{Transformer \& GNN for Link Prediction}{2024}{\href{https://github.com/bGuzzo/transformer-gnn-link-prediction}{github.com/bGuzzo/transformer-gnn-link-prediction}}
+		\begin{itemize}[leftmargin=*, nosep]
+			\item Combined Graph Attention Networks with Transformer layers to predict links in dynamic graphs.
+			\item Improved accuracy by X\% over GNN baselines.
+		\end{itemize}
+		
+		\cvsection{Education}
+		
+		\cvsubsection{MSc, AI \& Machine Learning Engineering}{Oct 2022 -- Jun 2025 (Expected)}{UNICAL, Rende (CS), Italy}
+		\cvsubsection{BSc, Computer Engineering}{Oct 2018 -- Jun 2022}{UNICAL, Rende (CS), Italy}
+		
+		% switch columns
+		\switchcolumn
+		
+		%---------------- RIGHT COLUMN ----------------
+		\begin{center}
+			\fbox{\rule{0pt}{4.5cm}\hspace{4.5cm}}\par
+			\small\textit{Replace this box with your photo}
+		\end{center}
+		\vspace{8pt}
+		
+		\begin{tabularx}{\linewidth}{@{}lX@{}}
+			\faPhone & +39 339 830 5458 \\
+			\faEnvelope & \href{mailto:brunoguzzo18@gmail.com}{brunoguzzo18@gmail.com} \\
+			\faGithub & \href{https://github.com/bGuzzo}{github.com/bGuzzo} \\
+		\end{tabularx}
+		
+		\cvsection{Technical Skills}
+		
+		{\bfseries AI \& Machine Learning}
+		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+			\item \textbf{Frameworks:} PyTorch, Langchain
+			\item \textbf{Libraries:} Pandas, NumPy, Scikit-learn
+			\item \textbf{Concepts:} LLM Fine-Tuning, RAG, NLP, Deep Learning, GNNs
+		\end{itemize}
+		
+		{\bfseries Cloud (Google Cloud)}
+		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+			\item Compute: Cloud Run, Cloud Functions
+			\item AI/ML: Vertex AI, Agent Builder
+			\item Data: BigQuery, Cloud SQL, Firestore
+			\item Infra: VPC, Load Balancer, IAM
+		\end{itemize}
+		
+		{\bfseries DevOps}
+		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+			\item IaC: Terraform
+			\item CI/CD: Cloud Build, GitLab CI, GitHub Actions
+			\item Containers: Docker
+			\item Other: Linux, Git
+		\end{itemize}
+		
+		{\bfseries Software Development}
+		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+			\item Languages: Python, Java, JavaScript
+			\item Frameworks: Spring Boot, Angular, Flask
+			\item Databases: PostgreSQL, NoSQL
+		\end{itemize}
+		
+		\cvsection{Certifications}
+		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+			\item Google Cloud Professional Cloud Developer
+		\end{itemize}
+		
+		\cvsection{Languages}
+		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+			\item Italian: Native
+			\item English: Professional (B2)
+		\end{itemize}
+		
+	\end{paracol}
 \end{document}
