@@ -17,7 +17,7 @@
 \setlength{\parindent}{0pt}
 
 \newcommand{\cvsection}[1]{%
-	\vspace{8pt}\par
+	\vspace{4pt}\par
 	{\Large\bfseries\color{sectionblue}#1}\par
 	\vspace{2pt}\hrule\vspace{6pt}
 }
@@ -26,13 +26,17 @@
 	\par {\large\bfseries #1} \hfill {\bfseries #2} \par {\textit{#3}} \vspace{4pt}
 }
 
+\newcommand{\cvproject}[1]{%
+	\par {\large{\bfseries{\textit{#1}}}} \par \vspace{4pt}
+}
+
 \begin{document}
 	
 	%---------------- HEADER ----------------
 	\begin{center}
 		{\Huge\bfseries Bruno Guzzo}\par
 		\vspace{4pt}
-		{\Large Software \& Cloud Engineer | Machine Learning Specialist}
+		{\Large Machine Learning Engineer | Cloud Specialist}
 	\end{center}
 	\vspace{10pt}
 	
@@ -43,7 +47,7 @@
 		%---------------- LEFT COLUMN ----------------
 		\cvsection{Work Experience}
 		
-		\cvsubsection{Senior Consultant}{June 2022 -- Present}{Go Reply, Turin/Remote}
+		\cvsubsection{Mid-Senior Consultant}{January 2025 -- Present}{Go Reply, Turin}
 		
 		\begin{itemize}[leftmargin=*, nosep]
 			\item Led the design and implementation of a cloud-native, serverless solution; migrated from a legacy monolithic system.
@@ -55,30 +59,46 @@
 		\end{itemize}
 		
 		\vspace{6pt}
-		\cvsubsection{Previous Role}{Month Year -- Month Year}{Previous Company, City}
+		\cvsubsection{Consultant}{June 2022 -- December 2024}{Go Reply, Turin}
 		\begin{itemize}[leftmargin=*, nosep]
 			\item Addressed business or technical issues; designed data solutions improving performance and scalability.
 			\item Increased user engagement by X\%, reduced query latency by Y\%.
 		\end{itemize}
 		
+		\vspace{10pt}\par
 		\cvsection{Personal \& Academic Projects}
 		
-		\cvsubsection{MSc Thesis: Anomaly Detection with Deep Autoencoders}{2024 -- 2025}{\href{https://github.com/bGuzzo/msc-ai-ml-thesis-anomaly-detection}{github.com/bGuzzo/msc-ai-ml-thesis-anomaly-detection}}
+		\cvproject{\href{https://github.com/bGuzzo/msc-ai-ml-thesis-anomaly-detection}{MSc Thesis: Anomaly Detection with Deep Autoencoders}}
 		\begin{itemize}[leftmargin=*, nosep]
-			\item Implemented Deep AE, VAE, and ConvAE using PyTorch for unsupervised anomaly detection.
-			\item Achieved X\% AUC-ROC detecting anomalies in industrial datasets.
+			\item \footnotesize Investigated and optimized a semi-supervised anomaly detection pipeline using a novel Autoencoder (AE-SAD) architecture, specifically addressing the challenge of severe class imbalance in the training data.
+			\item \footnotesize Demonstrated that applying advanced under-sampling techniques, such as Neighborhood Cleaning Rule (NCR), can significantly boost detection accuracy (AUC) in complex many-vs-many scenarios while reducing training time by up to two orders of magnitude.
 		\end{itemize}
 		
 		\vspace{6pt}
-		\cvsubsection{Transformer \& GNN for Link Prediction}{2024}{\href{https://github.com/bGuzzo/transformer-gnn-link-prediction}{github.com/bGuzzo/transformer-gnn-link-prediction}}
+		\cvproject{\href{https://github.com/bGuzzo/transformer-gnn-link-prediction}{Transformer-GNN for Link Prediction}}
 		\begin{itemize}[leftmargin=*, nosep]
-			\item Combined Graph Attention Networks with Transformer layers to predict links in dynamic graphs.
-			\item Improved accuracy by X\% over GNN baselines.
+			\item \footnotesize Built a scalable data pipeline to create a large-scale graph dataset from Wikipedia using web crawling and NLP.
+			\item \footnotesize Trained and evaluated multiple Graph Attention Network (GAT) models on the custom dataset, analyzing graph metrics and model performance.
 		\end{itemize}
 		
+		\vspace{6pt}
+		\cvproject{\href{https://github.com/bGuzzo/Anomaly-Transformer-Analysis}{Anomaly Transformer Analysis}}
+		\begin{itemize}[leftmargin=*, nosep]
+			\item \footnotesize Developed and implemented a novel time-series anomaly detection model using the Anomaly-Transformer architecture, leveraging self-attention mechanisms to effectively identify anomalies within the Mars Science Laboratory (MSL) dataset.
+			\item \footnotesize Engineered a robust machine learning pipeline encompassing data preprocessing, model training, and rigorous evaluation. Optimized model performance through extensive hyperparameter tuning via grid search, achieving state-of-the-art results in anomaly detection.
+		\end{itemize}
+			
+		\vspace{6pt}
+		\cvproject{\href{https://github.com/bGuzzo/Italian-LLaMA-Project}{Italian LLaMA 3 Fine-Tuning and Evaluation}}
+		\begin{itemize}[leftmargin=*, nosep]
+			\item \footnotesize Enhanced the ``LLaMAntino-3'' model by fine-tuning it on the Italian Wikipedia, resulting in a significant improvement in language modeling capabilities as measured by a reduction in perplexity.
+			\item \footnotesize Developed a RAG-based chatbot using the fine-tuned model to answer questions about Italian literature, leveraging a custom corpus of documents.
+		\end{itemize}
+		
+		\vspace{10pt}\par
 		\cvsection{Education}
 		
-		\cvsubsection{MSc, AI \& Machine Learning Engineering}{Oct 2022 -- Jun 2025 (Expected)}{UNICAL, Rende (CS), Italy}
+		\cvsubsection{MSc, AI \& ML Engineering}{Oct 2022 -- Jun 2025}{UNICAL, Rende (CS), Italy}
 		\cvsubsection{BSc, Computer Engineering}{Oct 2018 -- Jun 2022}{UNICAL, Rende (CS), Italy}
 		
 	\end{minipage}%
@@ -131,10 +151,10 @@
 			\item Databases: PostgreSQL, NoSQL
 		\end{itemize}
 		
-		\cvsection{Certifications}
-		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-			\item Google Cloud Professional Cloud Developer
-		\end{itemize}
+%		\cvsection{Certifications}
+%		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+%			\item Google Cloud Professional Cloud Developer
+%		\end{itemize}
 		
 		\cvsection{Languages}
 		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
