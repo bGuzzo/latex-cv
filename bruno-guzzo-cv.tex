@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[9pt, a4paper]{article}
-\usepackage[a4paper, margin=0.7in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage[a4paper, margin=0.4in, top=0.3in, bottom=0.2in]{geometry}
 \usepackage{fontawesome5}
 \usepackage{tabularx}
 \usepackage{enumitem}
@@ -17,7 +17,7 @@
 \setlength{\parindent}{0pt}
 
 \newcommand{\cvsection}[1]{%
-	\vspace{4pt}\par
+	\vspace{2pt}\par
 	{\Large\bfseries\color{sectionblue}#1}\par
 	\vspace{2pt}\hrule\vspace{6pt}
 }
@@ -36,9 +36,9 @@
 	\begin{center}
 		{\Huge\bfseries Bruno Guzzo}\par
 		\vspace{4pt}
-		{\Large Machine Learning Engineer | Cloud Specialist}
+		{\Large Machine Learning Engineer | Cloud Specialist | Consultant}
 	\end{center}
-	\vspace{10pt}
+%	\vspace{5pt}
 	
 	%---------------- TWO-COLUMN LAYOUT USING MINIPAGE (70-30) ----------------
 	\begin{minipage}[t]{0.70\linewidth}
@@ -50,19 +50,47 @@
 		\cvsubsection{Mid-Senior Consultant}{January 2025 -- Present}{Go Reply, Turin}
 		
 		\begin{itemize}[leftmargin=*, nosep]
-			\item Led the design and implementation of a cloud-native, serverless solution; migrated from a legacy monolithic system.
-			\item Reduced operational costs by X\%, improved processing speed by Y\%, and increased service availability to 99.99\%.
-			\item Integrated CI/CD pipelines with Cloud Build and Terraform; automated testing and deployment.
-			\item Decreased deployment errors by 100\% and shortened release time from days to hours.
-			\item Built a Generative AI chatbot with RAG system using Vertex AI Agent Builder for internal documentation.
-			\item Improved internal support ticket resolution by X\%.
+			% MISE - BIANCA
+			\item \footnotesize Coordinated a multi-company effort to gather customer requirements and design a cloud-native \textbf{research-oriented healthcare platform}, enabling for cloud-centralized quick clinical and \textbf{genomic data retrieval}.     
+			
+			% Azimut
+			\vspace{2pt}
+			\item \footnotesize Directed a cross-functional team of developers in delivering a \textbf{B2C cloud-native mobile application} enabling for after-sales support, digital documentation access via Gen-AI chat-bot and seamless multi-cloud business-end \textbf{CRM integration}.   
+			
+			% FAO 
+			\vspace{2pt}
+			\item \footnotesize Designed and implemented scalable \textbf{legal treaties search engine and RAG solution} using \textbf{Vertex AI} with high-efficient and concurrent data ingestion pipeline, enabling insight generation and optimization of core business processes. 
+			Improved data processing speed by \textbf{94\%}.  
+			
+			% Advisory & business development	
+			\vspace{2pt}		
+			\item \footnotesize Advised clients on \textbf{AI and argentic system} integration, facilitating the adoption of Google Cloud enterprise ecosystem via \textbf{custom-tailored RFP solutions} to improve critical business process.
+			Increased clients adoption rate of Vertex AI by \textbf{30\%}.  
+			
+			% FAO Mgmt
+			\vspace{2pt}
+			\item \footnotesize Managed \textbf{strategic client engagement} within the global development industry, coordinating \textbf{multi-project cloud advisory} and \textbf{resource allocation} that mobilized \textbf{20\%} of the BU workforce and drove \textbf{30\%} of unit profitability.
+			
+			% Development
+			\vspace{2pt}
+			\item \footnotesize Mentored junior engineers, \textbf{promoted agile best practices} throughout knowledge-sharing events, and \textbf{coordinated sprint reviews} and retrospectives to accelerate team performance and continuous improvement. 
+			Successfully decreased code-review time by \textbf{60\%}.  
 		\end{itemize}
 		
 		\vspace{6pt}
 		\cvsubsection{Consultant}{June 2022 -- December 2024}{Go Reply, Turin}
 		\begin{itemize}[leftmargin=*, nosep]
-			\item Addressed business or technical issues; designed data solutions improving performance and scalability.
-			\item Increased user engagement by X\%, reduced query latency by Y\%.
+			
+			% Infarm
+			\item \footnotesize Contributed to the development of a digital platform for the \textbf{agriculture and food sector}, enhancing \textbf{data collection and analytics} capabilities to support evidence-based decision-making on sustainable farming and antimicrobial resistance, while leading its \textbf{migration on Google Cloud} for scalability and performance. Successfully reduced infrastructural costs by 30\%.
+			
+			% Futuri
+			\vspace{2pt}
+			\item \footnotesize Participated to the implementation and deployment of a \textbf{digital learning solution} in the \textbf{education industry}, delivering scalable and cloud-based features aligned with client innovation goals.
+			
+			% Vodafone
+			\vspace{2pt}
+			\item \footnotesize Modernized a large-scale \textbf{telecommunications cybersecurity platform}, improving scalability and user experience through \textbf{architectural refactoring}, cloud integration, and automation to strengthen \textbf{service reliability} across mobile and fixed networks. 
 		\end{itemize}
 		
 		\vspace{10pt}\par
@@ -70,28 +98,36 @@
 		
 		\cvproject{\href{https://github.com/bGuzzo/msc-ai-ml-thesis-anomaly-detection}{MSc Thesis: Anomaly Detection with Deep Autoencoders}}
 		\begin{itemize}[leftmargin=*, nosep]
-			\item \footnotesize Investigated and optimized a semi-supervised anomaly detection pipeline using a novel Autoencoder (AE-SAD) architecture, specifically addressing the challenge of severe class imbalance in the training data.
-			\item \footnotesize Demonstrated that applying advanced under-sampling techniques, such as Neighborhood Cleaning Rule (NCR), can significantly boost detection accuracy (AUC) in complex many-vs-many scenarios while reducing training time by up to two orders of magnitude.
+			\item \footnotesize Investigated a semi-supervised anomaly detection pipeline using a novel Autoencoder (AE-SAD) architecture, specifically addressing the challenge of severe class imbalance during training.
+			
+			\vspace{2pt}
+			\item \footnotesize Demonstrated that applying advanced under-sampling techniques can significantly boost detection accuracy (AUC) in complex many-vs-many scenarios while reducing training time by up to two orders of magnitude.
 		\end{itemize}
 		
 		\vspace{6pt}
 		\cvproject{\href{https://github.com/bGuzzo/transformer-gnn-link-prediction}{Transformer-GNN for Link Prediction}}
 		\begin{itemize}[leftmargin=*, nosep]
 			\item \footnotesize Built a scalable data pipeline to create a large-scale graph dataset from Wikipedia using web crawling and NLP.
+			
+			\vspace{2pt}
 			\item \footnotesize Trained and evaluated multiple Graph Attention Network (GAT) models on the custom dataset, analyzing graph metrics and model performance.
 		\end{itemize}
 		
 		\vspace{6pt}
 		\cvproject{\href{https://github.com/bGuzzo/Anomaly-Transformer-Analysis}{Anomaly Transformer Analysis}}
 		\begin{itemize}[leftmargin=*, nosep]
-			\item \footnotesize Developed and implemented a novel time-series anomaly detection model using the Anomaly-Transformer architecture, leveraging self-attention mechanisms to effectively identify anomalies within the Mars Science Laboratory (MSL) dataset.
-			\item \footnotesize Engineered a robust machine learning pipeline encompassing data preprocessing, model training, and rigorous evaluation. Optimized model performance through extensive hyperparameter tuning via grid search, achieving state-of-the-art results in anomaly detection.
+			\item \footnotesize Implemented a novel time-series anomaly detection model using the Anomaly-Transformer architecture, leveraging self-attention mechanisms to identify anomalies within the Mars Science Laboratory (MSL) dataset.
+			
+			\vspace{2pt}
+			\item \footnotesize Engineered a robust machine learning pipeline encompassing model training, and rigorous evaluation. Optimized model performance through extensive hyper-parameter tuning via grid search.
 		\end{itemize}
 			
 		\vspace{6pt}
 		\cvproject{\href{https://github.com/bGuzzo/Italian-LLaMA-Project}{Italian LLaMA 3 Fine-Tuning and Evaluation}}
 		\begin{itemize}[leftmargin=*, nosep]
 			\item \footnotesize Enhanced the ``LLaMAntino-3'' model by fine-tuning it on the Italian Wikipedia, resulting in a significant improvement in language modeling capabilities as measured by a reduction in perplexity.
+			
+			\vspace{2pt}
 			\item \footnotesize Developed a RAG-based chatbot using the fine-tuned model to answer questions about Italian literature, leveraging a custom corpus of documents.
 		\end{itemize}
 		
@@ -117,6 +153,7 @@
 			\faPhone & +39 339 830 5458 \\
 			\faEnvelope & \href{mailto:brunoguzzo18@gmail.com}{brunoguzzo18@gmail.com} \\
 			\faGithub & \href{https://github.com/bGuzzo}{github.com/bGuzzo} \\
+			\faLinkedin & \href{https://www.linkedin.com/in/guzzobruno/}{linkedin.com/in/guzzobruno} \\
 		\end{tabularx}
 		
 		\cvsection{Technical Skills}
@@ -159,7 +196,7 @@
 		\cvsection{Languages}
 		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
 			\item Italian: Native
-			\item English: Professional (B2)
+			\item English: B2, certified
 		\end{itemize}
 		
 	\end{minipage}
