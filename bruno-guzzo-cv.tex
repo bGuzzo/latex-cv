@@ -11,6 +11,8 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{amsmath}
 \usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
 
 \definecolor{sectionblue}{rgb}{0.1, 0.3, 0.6}
 \pagestyle{empty}
@@ -41,13 +43,13 @@
 %	\vspace{5pt}
 	
 	%---------------- TWO-COLUMN LAYOUT USING MINIPAGE (70-30) ----------------
-	\begin{minipage}[t]{0.70\linewidth}
+	\begin{minipage}[t]{0.65\linewidth}
 		\vspace{0pt} % Top-align
 		
 		%---------------- LEFT COLUMN ----------------
 		\cvsection{Work Experience}
 		
-		\cvsubsection{Mid-Senior Consultant}{January 2025 -- Present}{Go Reply, Turin}
+		\cvsubsection{Mid-Senior Consultant}{January 2025 -- Present}{\href{https://www.reply.com/go-reply/en}{Go Reply, Turin}}
 		
 		\begin{itemize}[leftmargin=*, nosep]
 			% MISE - BIANCA
@@ -78,11 +80,11 @@
 		\end{itemize}
 		
 		\vspace{6pt}
-		\cvsubsection{Consultant}{June 2022 -- December 2024}{Go Reply, Turin}
+		\cvsubsection{Consultant}{June 2022 -- December 2024}{\href{https://www.reply.com/go-reply/en}{Go Reply, Turin}}
 		\begin{itemize}[leftmargin=*, nosep]
 			
 			% Infarm
-			\item \footnotesize Contributed to the development of a digital platform for the \textbf{agriculture and food sector}, enhancing \textbf{data collection and analytics} capabilities to support evidence-based decision-making on sustainable farming and antimicrobial resistance, while leading its \textbf{migration on Google Cloud} for scalability and performance. Successfully reduced infrastructural costs by 30\%.
+			\item \footnotesize Contributed to the development of a digital platform for the \textbf{agriculture and food sector}, enhancing \textbf{data collection and analytics} capabilities to support evidence-based decision-making on sustainable farming and antimicrobial resistance, while leading its \textbf{migration on Google Cloud} for scalability and performance. Successfully reduced infrastructural costs by \textbf{30\%}.
 			
 			% Futuri
 			\vspace{2pt}
@@ -139,15 +141,17 @@
 		
 	\end{minipage}%
 	\hfill%
-	\begin{minipage}[t]{0.27\linewidth}
+	\begin{minipage}[t]{0.32\linewidth}
 		\vspace{0pt} % Top-align
 		
 		%---------------- RIGHT COLUMN ----------------
 		\begin{center}
-			\fbox{\rule{0pt}{4.5cm}\hspace{4.5cm}}\par
-			\small\textit{Replace this box with your photo}
+			\begin{tikzpicture}
+				\clip (0,0) circle (2.25cm);
+				\node at (0,0) {\includegraphics[width=4.5cm]{PICS/me_linkedin.jpeg}};
+			\end{tikzpicture}
 		\end{center}
-		\vspace{8pt}
+%		\vspace{4pt}
 		
 		\begin{tabularx}{\linewidth}{@{}lX@{}}
 			\faPhone & +39 339 830 5458 \\
@@ -155,38 +159,51 @@
 			\faGithub & \href{https://github.com/bGuzzo}{github.com/bGuzzo} \\
 			\faLinkedin & \href{https://www.linkedin.com/in/guzzobruno/}{linkedin.com/in/guzzobruno} \\
 		\end{tabularx}
+		\vspace{4pt}
 		
 		\cvsection{Technical Skills}
 		
-		{\bfseries AI \& Machine Learning}
-		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-			\item \textbf{Frameworks:} PyTorch, Langchain
-			\item \textbf{Libraries:} Pandas, NumPy, Scikit-learn
-			\item \textbf{Concepts:} LLM Fine-Tuning, RAG, NLP, Deep Learning, GNNs
-		\end{itemize}
-		
 		{\bfseries Cloud (Google Cloud)}
 		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-			\item Compute: Cloud Run, Cloud Functions
-			\item AI/ML: Vertex AI, Agent Builder
-			\item Data: BigQuery, Cloud SQL, Firestore
-			\item Infra: VPC, Load Balancer, IAM
+			\footnotesize
+			\item \textbf{Compute}: Cloud Run, App Engine, Cloud Functions, Compute Engine
+			\item \textbf{AI/ML}: Vertex AI, Agent Builder
+			\item \textbf{Data}: BigQuery, Cloud SQL, Firestore
+			\item \textbf{Infra}: VPC, Load Balancer, IAM, Cloud Armor
 		\end{itemize}
+		\vspace{4pt}
+		
+		{\bfseries AI \& Machine Learning}
+		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+			\footnotesize
+			\item \textbf{Frameworks}: PyTorch, PyTorch Geometric, Langchain, Hugging Face Transformers, PEFT (Parameter-Efficient Fine-Tuning), TRL (Transformer Reinforcement Learning), Unsloth
+			
+			\item \textbf{Libraries}: Pandas, NumPy, Scikit-learn, SciPy, NLTK, Sentence-Transformers, FAISS (Vector Database), BitsAndBytes (for Quantization) 
+			
+			\item \textbf{Architecture}: GNNs (Graph Neural Networks), CNN (Convolutional Neural Networks), Autoencoder, Transformer, Self-Attention Mechanisms, Graph Attention Networks (GAT), GPT, BERT, Vision Transformers (ViTs), VGGNet, AlexNet
+			
+			\item \textbf{Concepts}: LLM (Large Language Models), RAG (Retrieval-Augmented Generation), NLP (Natural Language Processing), Deep Learning, Fine-Tuning (QLoRA), Vector Databases, Embeddings, Anomaly Detection, Time-Series Analysis, Link Prediction, Semi-Supervised Learning, Class Imbalance, Under-sampling Techniques, Hyperparameter Tuning, Model Evaluation, Reinforcement Learning  
+		\end{itemize}
+		\vspace{4pt}
 		
 		{\bfseries DevOps}
 		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-			\item IaC: Terraform
-			\item CI/CD: Cloud Build, GitLab CI, GitHub Actions
-			\item Containers: Docker
-			\item Other: Linux, Git
+			\footnotesize
+			\item \textbf{IaC}: Terraform
+			\item \textbf{CI/CD}: Cloud Build, GitLab CI, GitHub Actions, Artifact Registry
+			\item \textbf{Containers}: Docker
+			\item \textbf{Other}: Linux, Git
 		\end{itemize}
+		\vspace{4pt}
 		
 		{\bfseries Software Development}
 		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-			\item Languages: Python, Java, JavaScript
-			\item Frameworks: Spring Boot, Angular, Flask
-			\item Databases: PostgreSQL, NoSQL
+			\footnotesize
+			\item \textbf{Languages}: Python, Java, C, JavaScript, Typescript, Dart
+			\item \textbf{Frameworks}: Spring Boot, Hibernate, JPA, Flask, Django, SQLAlchelmy Angular, React, Flutter
+			\item \textbf{Databases}: PostgreSQL, MySQL, NoSQL
 		\end{itemize}
+		\vspace{7pt}
 		
 %		\cvsection{Certifications}
 %		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
@@ -195,8 +212,8 @@
 		
 		\cvsection{Languages}
 		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
-			\item Italian: Native
-			\item English: B2, certified
+			\item \textbf{Italian}: Native
+			\item \textbf{English}: B2, certified
 		\end{itemize}
 		
 	\end{minipage}
