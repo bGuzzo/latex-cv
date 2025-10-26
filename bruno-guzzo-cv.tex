@@ -28,6 +28,10 @@
 	\par {\large\bfseries #1} \hfill {\bfseries #2} \par {\textit{#3}} \vspace{4pt}
 }
 
+\newcommand{\jobsection}[3]{%
+	\par {\large #1} \hfill {\bfseries #2} \par {\textit{#3}} \vspace{4pt}
+}
+
 \newcommand{\cvproject}[1]{%
 	\par {\large{\bfseries{\textit{#1}}}} \par \vspace{4pt}
 }
@@ -38,7 +42,7 @@
 	\begin{center}
 		{\Huge\bfseries Bruno Guzzo}\par
 		\vspace{4pt}
-		{\Large Machine Learning Engineer | Cloud Architect | Consultant}
+		{\Large Machine Learning Engineer | Cloud Architect}
 	\end{center}
 %	\vspace{5pt}
 	
@@ -49,7 +53,7 @@
 		%---------------- LEFT COLUMN ----------------
 		\cvsection{Work Experience}
 		
-		\cvsubsection{Mid-Senior Consultant}{January 2025 -- Present}{\href{https://www.reply.com/go-reply/en}{Go Reply, Turin}}
+		\jobsection{\textbf{AI Specialist} (Mid-Senior Consultant)}{January 2025 -- Present}{\href{https://www.reply.com/go-reply/en}{Go Reply, Turin}}
 		
 		\begin{itemize}[leftmargin=*, nosep]
 			% MISE - BIANCA
@@ -80,7 +84,7 @@
 		\end{itemize}
 		
 		\vspace{6pt}
-		\cvsubsection{Consultant}{June 2022 -- December 2024}{\href{https://www.reply.com/go-reply/en}{Go Reply, Turin}}
+		\jobsection{\textbf{Software Engineer} (Consultant)}{June 2022 -- December 2024}{\href{https://www.reply.com/go-reply/en}{Go Reply, Turin}}
 		\begin{itemize}[leftmargin=*, nosep]
 			
 			% Infarm
@@ -187,7 +191,7 @@
 		{\bfseries DevOps} (\textit{Advanced})
 		\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
 			\footnotesize
-			\item \textbf{IaC}: Terraform
+			\item \textbf{IaC}: Terraform, Fabric
 			\item \textbf{CI/CD}: Cloud Build, GitLab CI, GitHub Actions, Artifact Registry
 			\item \textbf{Containers}: Docker
 			\item \textbf{Others}: Linux, Git, A/B Testing
